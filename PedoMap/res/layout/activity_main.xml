@@ -1,0 +1,273 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/post_border_style"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+	<LinearLayout
+        android:id="@+id/wholeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    	android:orientation="vertical"
+	    >
+    <LinearLayout
+        android:id="@+id/gageLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/post_background_style"
+        android:gravity="fill"
+         >
+
+        <LinearLayout
+            android:id="@+id/col1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.4"
+            android:dividerPadding="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/distance" />
+
+                <TextView
+                    android:id="@+id/txt_curent_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txt_distance_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="KM"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/footprint" />
+
+                <TextView
+                    android:id="@+id/txt_step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="Steps"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/col2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.0"
+            android:dividerPadding="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/timer" />
+
+                <TextView
+                    android:id="@+id/txt_curent_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00&apos;00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="MIN"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                 <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/footprint" />
+
+                <TextView
+                    android:id="@+id/txt_pace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="pace/min"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/col3"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="2.4"
+            android:dividerPadding="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/col3_row1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/speed" />
+
+                <TextView
+                    android:id="@+id/txt_curent_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txt_speed_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="KPH"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col3_row2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp" >
+
+               <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/footprint" />
+
+                <TextView
+                    android:id="@+id/txt_calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:gravity="center"
+                    android:text="calories"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6" />
+
+    <LinearLayout
+        android:id="@+id/gridbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/post_background_style" >
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/blue_menu_btn"
+            android:text="Start"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_stop_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/red_menu_btn"
+            android:text="History"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#80000000"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp" />
+	
+</android.support.v4.widget.DrawerLayout>
